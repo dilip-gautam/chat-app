@@ -11,7 +11,7 @@ socket.on('disconnect',function(){console.log('Disconnected from server');});
 socket.on('newMessage',function(msg){console.log('new message',msg);
 
 var li=jQuery('<li></li>');
-    li.text(`${msg.from} ${msg.text} `);
+    li.text(`${msg.from}: ${msg.text} `);
     jQuery('#messages').append(li);
 });
 

@@ -21,16 +21,16 @@ var li=jQuery('<li></li>');
 //     function(value){console.log(value)}
 // );
     
+    var messagetext= document.getElementById("msg");
 
     jQuery('#message-form').on('submit',function(e){
         e.preventDefault();
 
-    
     socket.emit('createMessage',{
-        from: document.getElementById("username").value,
-        text: document.getElementById("msg").value
+        from: 'ram',
+        text: messagetext.value
     },function(){
-
+        messagetext.value=""
     });
 });
 

@@ -9,7 +9,7 @@
 </head>
 <body class="chat">
     <div class="chat__sidebar">
-          <h3>People</h3>
+          <h3>Users</h3>
           <div id="users"></div>
     </div>
     <div class="chat__main">
@@ -21,8 +21,21 @@
             </form>    
         </div>
     </div>    
+    <script id="message-template" type="text/template">
+        <li class="message" >
+            <div class="message__title">
+                <h4>{{ from }}</h4>
+                <span>{{createdAt}}</span>
+            </div>
+            <div class="message__body">
+                <p>{{text}}</p>
+            </div>
+        </li>
+    </script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/library/jquery-3.3.1.min.js"></script>
+    <script src="/js/library/moment.js"></script>
+    <script src="/js/library/mustache.js"></script>
     <script src="/js/main.js"></script>
 </body>
 </html>

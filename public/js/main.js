@@ -8,11 +8,21 @@ socket.on('connect',function(){console.log('connected to server');
 });
 
 socket.on('disconnect',function(){console.log('Disconnected from server');});
-socket.on('newMessage',function(msg){console.log('new message',msg);
+socket.on('newMessage',function(msg){
+    console.log('new message',msg);
+    var formattedTime= moment(msg.createdAt).format('h:mm a')
+    var template= jQuery('#message-template').html();
+    var html= Mustache.render(template,
+    {
+        from:msg.from,
+        text:msg.text,
+        createdAt: formattedTime,
 
-var li=jQuery('<li></li>');
-    li.text(`${msg.from}: ${msg.text} `);
-    jQuery('#messages').append(li);
+    });
+    jQuery('#messages').append(html);
+    // var li=jQuery('<li></li>');
+    //     li.text(`${msg.from}: ${msg.text} :${formattedTime} `);
+    // jQuery('#messages').append(li);
 });
 
 // socket.emit('createMessage',{

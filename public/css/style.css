@@ -83,7 +83,7 @@
   
   .chat__sidebar {
     overflow-y: scroll;
-    width: 260px;
+    width: 180px;
     height: 100vh;
     background: -webkit-linear-gradient(125deg,#43cea2  0%, #185a9d 100%);
     background: -moz-linear-gradient(125deg,#43cea2  0%, #185a9d 100%);
@@ -124,7 +124,6 @@
     background: #e6eaee;
     display: flex;
     padding: 10px;
-    /*height: 60px;*/
     flex-shrink: 0;
   }
   

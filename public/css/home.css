@@ -1,0 +1,29 @@
+h3{
+    padding-top: 50px;
+    color: #ffffff;
+   
+}
+
+body{
+    background: -webkit-linear-gradient(0deg,#43cea2  0%, #185a9d 100%); 
+    background: -moz-linear-gradient(125deg,#43cea2  0%, #185a9d 100%); 
+}
+.container{
+    padding-top: 50px;
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px; 
+}
+
+button {
+    background: -webkit-linear-gradient(125deg,#43cea2  0%, #185a9d 100%); 
+    background: -moz-linear-gradient(125deg,#43cea2  0%, #185a9d 100%); 
+  }
+
+button:hover {
+    background: -webkit-linear-gradient(125deg , #185a9d 0% ,#43cea2 100%);
+    background: -moz-linear-gradient(125deg , #185a9d 0% ,#43cea2 100%);
+  }

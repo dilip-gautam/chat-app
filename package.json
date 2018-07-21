@@ -4,9 +4,7 @@
   "description": "",
   "main": "new.js",
   "scripts": {
-    "start": "node server/server.js",
-    "test": "mocha server/**/*.test.js",
-    "test-watch": "nodemon --exec 'npm-test'"
+    "start": "node server/server.js"
   },
   "engines": {
     "node": "8.11.1"
@@ -14,9 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "expect": "^23.4.0",
     "express": "^4.16.3",
-    "mocha": "^5.2.0",
     "moment": "^2.22.2",
     "socket.io": "^2.1.1"
   },

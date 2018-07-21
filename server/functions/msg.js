@@ -6,6 +6,7 @@ var message= (from, text)=>{
         text,
         createdAt: moment().valueOf(),
     }
+
 };
 
 module.exports={message}; 

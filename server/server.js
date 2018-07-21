@@ -45,7 +45,7 @@ io.on('connection',(socket)=>{
 
             var user= users.getUser(socket.id);
             if(user && isRealString(msg.text)){
-                io.to(user.room).emit('newMessage',message(user,msg.text));
+                io.to(user.room).emit('newMessage',message(user.name,msg.text));
             }
 
             

@@ -5,6 +5,7 @@ h3{
 }
 
 body{
+    /* chrome and firefox */
     background: -webkit-linear-gradient(0deg,#43cea2  0%, #185a9d 100%); 
     background: -moz-linear-gradient(0deg,#43cea2  0%, #185a9d 100%); 
 }

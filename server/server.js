@@ -22,14 +22,6 @@ io.on('connection',(socket)=>{
                 return callback('Name and room name are required.');
             }
                 socket.join(params.room);
-                // users.removeUser(socket.id);
-                // users.addUser(socket.id,params.name,params.room);
-
-                // io.to(params.room).emit('updateUserList',users.getUserList(params.room));
-
-                // socket.emit('newMessage', message('Admin','Welcome to chat app'));
-                // socket.broadcast.to(params.room).emit('newMessage',message('Admin',`${params.name} has joined.`));
-                // callback();
                 users.removeUser(socket.id);
                 users.addUser(socket.id, params.name, params.room);
             
@@ -47,14 +39,7 @@ io.on('connection',(socket)=>{
             if(user && isRealString(msg.text)){
                 io.to(user.room).emit('newMessage',message(user.name,msg.text));
             }
-
-            
             callback();
-        // socket.broadcast.emit('newMessage',{ //broadcast.emit send message to everyone except sender
-        //     from:msg.from,
-        //     text:msg.text,
-        //     createdAt: new Date().getTime(),
-        // });
     });
 
 
@@ -68,12 +53,4 @@ io.on('connection',(socket)=>{
      });
 
 });
-// var user = users.removeUser(socket.id);
-
-//     if (user) {
-//       io.to(user.room).emit('updateUserList', users.getUserList(user.room));
-//       io.to(user.room).emit('newMessage', message('Admin', `${user.name} has left.`));
-//     }
-//   });
-// });
 server.listen(port ,()=>{console.log(`Server is running at ${port}`)});

@@ -14,12 +14,11 @@ function scrollToBotttom(){
 }
 
 socket.on('connect', function () {
-    var params = jQuery.deparam(window.location.search);
-  
+    var params = jQuery.deparam(window.location.search); // deparms username and roomname
     socket.emit('join', params, function (err) {
       if (err) {
         alert(err);
-        window.location.href = '/';
+        window.location.href = '/';   //redirect to homepage if user provides wrong input
       } 
     });
   });    

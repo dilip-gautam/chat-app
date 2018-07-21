@@ -17,6 +17,9 @@
     text-align: center;
     font-size: 1.5rem;
   }
+  .alert {
+    display:inline-block;
+ }
   
   button {
     border: none;
@@ -83,7 +86,7 @@
   
   .chat__sidebar {
     overflow-y: scroll;
-    width: 180px;
+    width: 250px;
     height: 100vh;
     background: -webkit-linear-gradient(125deg,#43cea2  0%, #185a9d 100%);
     background: -moz-linear-gradient(125deg,#43cea2  0%, #185a9d 100%);
@@ -148,16 +151,15 @@
   }
   
   .message {
-    padding: 10px;
+    padding: 0px;
   }
   
   .message__title {
     display: flex;
-    margin-bottom: 5px;
   }
   
-  .message__title h4 {
-    font-weight: 600;
+  .message__title h5 {
+    font-weight: 500;
     margin-right: 10px;
   }
   

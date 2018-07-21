@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
 </head>
 <body class="chat">
@@ -17,18 +18,18 @@
         <div class="chat__footer">
             <form id="message-form">
                 <input name="message" id="msg" type="text" placeholder="Message" autofocus autocomplete="off"/>
-                <button>Send</button>
+                <button class="btn" >Send</button>
             </form>    
         </div>
     </div>    
     <script id="message-template" type="text/template">
         <li class="message" >
             <div class="message__title">
-                <h4>{{ from }}</h4>
+                <h5>{{ from }}</h5>
                 <span>{{createdAt}}</span>
             </div>
-            <div class="message__body">
-                <p>{{text}}</p>
+            <div class="alert alert-primary" role="alert">
+               <p>{{text}}</p>
             </div>
         </li>
     </script>
